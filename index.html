@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .navbar-menu {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    max-height: 0px;
+    transition: 0.6s;
+  }
+
+  .navbar-menu li {
+    margin-bottom: 10px;
+  }
+
+  .navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .navbar-toggle {
+    cursor: pointer;
+  }
+
+  .toggle-line {
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .accordion {
+
+    border: 1px solid #ccc;
+  }
+
+  .accordion-item {
+    border-top: 1px solid #ccc;
+  }
+
+  .accordion-header {
+    background-color: #f4f4f4;
+    padding: 10px;
+    cursor: pointer;
+
+  }
+
+  .accordion-content {
+    padding: 0px 20px;
+    display: none;
+    max-height: 0px;
+    transition: 0.6s;
+    overflow: hidden;
+    display: block;
+  }
+
+  .fa-solid,
+  .fas {
+    color: darkgray;
+  }
+
+  .active{
+    max-height: 150px;
+    
+  }
+  .rave{
+    max-height: 200px;
+  }
+</style>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar">
+    <div class="navbar-toggle">
+      <i id="icon" onclick="toggleNavbar()" class="fas fa-bars"></i>
+    </div>
+    <div>
+      <ul class="navbar-menu" id="navbarMenu">
+        <li><a href="#">Ana Səhifə</a></li>
+        <li><a href="#">Xidmətlər</a></li>
+        <li><a href="#">Haqqımızda</a></li>
+        <li><a href="#">Bizimlə Əlaqə</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- navbar end -->
+  <!-- header start -->
+  <header>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(0)">
+          <h1> <i class="fa-solid fa-plate-wheat"></i> Karaca</h1>
+        </div>
+        <div class="accordion-content">
+          <p>
+            Karaca’nın hikayesi, 1973’te bir babanın oğullarıyla paylaştığı cesaret, umut ve heyecanla başladı. Karaca,
+            bu hikayeyi herkese anlatmak için yola çıktı. Anlattıkça, sofrasındaki tabaklar çoğaldı. Lorem ipsum dolor
+            sit, amet consectetur adipisicing elit. In fugit provident obcaecati amet, impedit officia error sequi
+            pariatur, consectetur sit accusamus deleniti molestias qui minus cumque, delectus repellendus tempora alias!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed laudantium aliquam itaque dicta. Animi
+            accusantium ab eius esse, tempore, perspiciatis, enim fugit quas reiciendis cum veritatis iure est quod
+            ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aperiam totam at. Nemo aperiam
+            delectus incidunt dolor blanditiis asperiores in!
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(1)">
+          <h1> <i class="fa-solid fa-couch"></i> Istikbal</h1>
+        </div>
+        <div class="accordion-content">
+          <p>
+            İstikbal, 1957 yılında Kayseri'de küçük bir marangoz atölyesinde kuruldu. Küçük atölye, yüksek performanslı
+            fonksiyonel ev mobilyaları sunarak yeni gelişen apartman ve şehir yaşamına hitap etti. Kısa süre sonra
+            atölye bir fabrikaya taşındı ve üretimini geniş bir yelpazedeki oturma odaları, yatak odaları, yemek
+            odaları, yataklar ve bazaları kapsayacak şekilde genişletti. Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Minima ab ad officiis iusto odio unde? Incidunt accusamus nulla iste ipsam explicabo
+            veniam laborum, necessitatibus eveniet. Nam esse animi hic fuga. Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Atque nulla consectetur fugit similique incidunt. Quo beatae voluptate dignissimos ex
+            incidunt laborum ipsam facilis aliquid, inventore minus iure repudiandae. Impedit, est.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(2)">
+          <h1> <i class="fa-solid fa-tv"></i> Samsung</h1>
+        </div>
+        <div class="accordion-content">
+          <p>
+            Samsung Grubu (“Samsung Grubu”, Korece 삼성그룹, Samseong Gurub, Samsŏng Gurup), 1938'de kurulan, en büyük
+            chaebol'lerden biri olan Güney Koreli bir şirketler grubudur. Samsung Grubu, grubun en ünlü şirketi olan
+            akıllı telefonlar, entegre devreler, telekomünikasyon ekipmanları, ev aletleri, ses ve video cihazları
+            üreticisi olarak bilinen halka açık şirket Samsung Electronics'in hissesine sahiptir. Aynı isimde elektronik
+            ürünler satan aynı isimde bir mağaza zinciri de bulunmaktadır. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Alias, quis temporibus voluptates commodi eius quia illo id nemo libero ipsam ut ducimus
+            ad possimus dignissimos facere aspernatur in consequatur voluptatem.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
